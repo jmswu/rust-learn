@@ -12,7 +12,7 @@
 
 Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
 
-- [ ] **Day 01 — Cargo and your first function** · `cargo test day01`
+- [x] **Day 01 — Cargo and your first function** · `cargo test day01`
   - Stretch: `cargo fmt`, then `cargo doc --open`.
 - [ ] **Day 02 — Variables, mutability, shadowing** · `cargo test day02`
   - Stretch: add a `const LIMIT: i32 = 100;` and use it.
