@@ -20,7 +20,12 @@
 //! **Exercise:** implement `running_total` with a mutable accumulator.
 
 pub fn running_total(values: &[i32]) -> i32 {
-    todo!("implement me")
+    let mut total = 0;
+    for &value in values
+    {
+        total = total + value;
+    }
+    total
 }
 
 #[cfg(test)]
