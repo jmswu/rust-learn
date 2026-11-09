@@ -14,7 +14,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
 
 - [x] **Day 01 — Cargo and your first function** · `cargo test day01`
   - Stretch: `cargo fmt`, then `cargo doc --open`.
-- [ ] **Day 02 — Variables, mutability, shadowing** · `cargo test day02`
+- [x] **Day 02 — Variables, mutability, shadowing** · `cargo test day02`
   - Stretch: add a `const LIMIT: i32 = 100;` and use it.
 - [ ] **Day 03 — Types, casts, and overflow** · `cargo test day03`
   - Stretch: run `cargo test --release` and explain the overflow difference.
