@@ -19,11 +19,11 @@
 //! **Exercise:** implement the two conversions below.
 
 pub fn celsius_to_fahrenheit(celsius: f64) -> f64 {
-    todo!("implement me")
+    celsius * 9.0 / 5.0 + 32.0
 }
 
 pub fn wrapping_add(a: u8, b: u8) -> u8 {
-    todo!("implement me")
+    a.wrapping_add(b)
 }
 
 #[cfg(test)]
