@@ -23,11 +23,9 @@
 pub fn clamp(value: i32, lo: i32, hi: i32) -> i32 {
     if value <= lo {
         lo
-    }
-    else if value >= hi {
+    } else if value >= hi {
         hi
-    }
-    else {
+    } else {
         value
     }
 }
@@ -35,7 +33,7 @@ pub fn clamp(value: i32, lo: i32, hi: i32) -> i32 {
 pub fn sign(n: i32) -> &'static str {
     if n == 0 {
         "zero"
-    }else if n < 0 {
+    } else if n < 0 {
         "negative"
     } else {
         "positive"

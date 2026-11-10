@@ -21,8 +21,7 @@
 
 pub fn running_total(values: &[i32]) -> i32 {
     let mut total = 0;
-    for &value in values
-    {
+    for &value in values {
         total = total + value;
     }
     total
