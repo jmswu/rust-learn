@@ -18,7 +18,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
   - Stretch: add a `const LIMIT: i32 = 100;` and use it.
 - [x] **Day 03 — Types, casts, and overflow** · `cargo test day03`
   - Stretch: run `cargo test --release` and explain the overflow difference.
-- [ ] **Day 04 — Functions and expressions** · `cargo test day04`
+- [x] **Day 04 — Functions and expressions** · `cargo test day04`
   - Stretch: rewrite `clamp` with early `return`s.
 - [ ] **Day 05 — Control flow** · `cargo test day05`
   - Stretch: rewrite `collatz_steps` with `loop` + `break`.

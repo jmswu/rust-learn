@@ -21,11 +21,25 @@
 //! **Exercise:** implement `clamp` and `sign` using `if` expressions.
 
 pub fn clamp(value: i32, lo: i32, hi: i32) -> i32 {
-    todo!("implement me")
+    if value <= lo {
+        lo
+    }
+    else if value >= hi {
+        hi
+    }
+    else {
+        value
+    }
 }
 
 pub fn sign(n: i32) -> &'static str {
-    todo!("implement me")
+    if n == 0 {
+        "zero"
+    }else if n < 0 {
+        "negative"
+    } else {
+        "positive"
+    }
 }
 
 #[cfg(test)]
