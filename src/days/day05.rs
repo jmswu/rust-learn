@@ -20,7 +20,15 @@
 //! halve it; otherwise compute `3n + 1`; stop at 1.
 
 pub fn collatz_steps(mut n: u64) -> u32 {
-    todo!("implement me")
+    let mut result: u64 = 0;
+    while n != 1 {
+        if n % 2 == 0 {
+            n = n / 2;
+        } else {
+            result = 3 * n + 1;
+        }
+    }
+    result as u32
 }
 
 #[cfg(test)]

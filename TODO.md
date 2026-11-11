@@ -20,7 +20,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
   - Stretch: run `cargo test --release` and explain the overflow difference.
 - [x] **Day 04 — Functions and expressions** · `cargo test day04`
   - Stretch: rewrite `clamp` with early `return`s.
-- [ ] **Day 05 — Control flow** · `cargo test day05`
+- [x] **Day 05 — Control flow** · `cargo test day05`
   - Stretch: rewrite `collatz_steps` with `loop` + `break`.
 - [ ] **Day 06 — Ownership I: move vs copy** · `cargo test day06`
   - Stretch: `rustc --explain E0382`.
