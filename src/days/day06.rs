@@ -25,7 +25,7 @@
 //! **Exercise:** take ownership of a `Vec<String>` and join it with spaces.
 
 pub fn join_words(words: Vec<String>) -> String {
-    todo!("implement me")
+    words.join(" ")
 }
 
 #[cfg(test)]

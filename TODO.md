@@ -22,7 +22,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
   - Stretch: rewrite `clamp` with early `return`s.
 - [x] **Day 05 — Control flow** · `cargo test day05`
   - Stretch: rewrite `collatz_steps` with `loop` + `break`.
-- [ ] **Day 06 — Ownership I: move vs copy** · `cargo test day06`
+- [x] **Day 06 — Ownership I: move vs copy** · `cargo test day06`
   - Stretch: `rustc --explain E0382`.
 - [ ] **Day 07 — Checkpoint: functions, loops, `Vec`** · `cargo test day07`
   - Stretch: make a `src/bin/collatz.rs` that reads `env::args()`.
