@@ -22,8 +22,20 @@
 //! **Exercise:** return the full Collatz sequence, starting at `n` and ending
 //! at 1. `n = 1` produces `[1]`.
 
+use crate::days::day25::List;
+
 pub fn collatz_sequence(n: u64) -> Vec<u64> {
-    todo!("implement me")
+    let mut data: Vec<u64> = vec![n];
+    let mut input: u64 = n;
+    while input != 1 {
+        input = if input % 2 == 0 {
+            input / 2
+        } else {
+            input * 3 + 1
+        };
+        data.push(input);
+    }
+    data
 }
 
 #[cfg(test)]

@@ -24,7 +24,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
   - Stretch: rewrite `collatz_steps` with `loop` + `break`.
 - [x] **Day 06 — Ownership I: move vs copy** · `cargo test day06`
   - Stretch: `rustc --explain E0382`.
-- [ ] **Day 07 — Checkpoint: functions, loops, `Vec`** · `cargo test day07`
+- [x] **Day 07 — Checkpoint: functions, loops, `Vec`** · `cargo test day07`
   - Stretch: make a `src/bin/collatz.rs` that reads `env::args()`.
 
 **Week 1 takeaway:** ______________________________________________________
