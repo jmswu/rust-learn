@@ -1,7 +1,7 @@
 //! # Day 02 — Variables, mutability, shadowing
 //!
-//! `let` is immutable by default — closer to C++ `const` than to a normal
-//! local. `let mut` opts into mutation.
+//! `let` creates an immutable binding by default (you cannot reassign it,
+//! though it can still be moved or shadowed). `let mut` opts into mutation.
 //!
 //! ```text
 //! let x = 5;        // immutable binding
@@ -13,9 +13,9 @@
 //! Shadowing is not reassignment: the old binding still exists and is simply
 //! hidden. It is idiomatic when a value is transformed step by step.
 //!
-//! Type inference works like `auto`, but function signatures are always
-//! explicit. `const` is a compile-time constant; `static` is a global with a
-//! fixed address.
+//! Type inference works like `auto` — and even infers backward from later
+//! uses — though function signatures are always explicit. `const` is a
+//! compile-time constant; `static` is a global with a fixed address.
 //!
 //! **Exercise:** implement `running_total` with a mutable accumulator.
 

@@ -1,8 +1,8 @@
 //! # Day 26 — Threads and shared state
 //!
-//! `std::thread::spawn` starts an OS thread. The closure must own its data
-//! (`move`) or borrow it through a scope (`thread::scope`, which joins
-//! automatically). Rust checks two marker traits at compile time:
+//! `std::thread::spawn` starts an OS thread; its closure must satisfy `'static`
+//! (no short-lived stack borrows — usually via `move`). To borrow local data,
+//! use `thread::scope`, which joins automatically. Rust checks two marker traits:
 //!
 //! - `Send` — safe to move to another thread
 //! - `Sync` — safe to share a reference between threads

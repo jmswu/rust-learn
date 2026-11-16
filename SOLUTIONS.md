@@ -454,7 +454,7 @@ self.items.is_empty()
 `src/days/day22.rs`
 
 ```rust
-xs.sort_by_key(|x| x.abs());
+xs.sort_by_key(|x| x.unsigned_abs());
 ```
 
 ### `apply_to_all(xs: &[i32], f: impl Fn(i32) -> i32) -> Vec<i32>`
@@ -555,7 +555,7 @@ if n < 2 {
 }
 
 let mut divisor = 2;
-while divisor * divisor <= n {
+while divisor <= n / divisor {
     if n % divisor == 0 {
         return false;
     }

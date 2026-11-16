@@ -17,7 +17,7 @@
 //! a UTF-8 code point. Use `chars()`, `bytes()`, or `char_indices()` for text.
 //! `&[T]` is the same fat-pointer idea for any array or `Vec<T>`.
 //!
-//! **Exercise:** return the first whitespace-delimited word. No space means the
+//! **Exercise:** return the first space-delimited word. No space means the
 //! whole string; a leading space means the empty slice.
 
 pub fn first_word(s: &str) -> &str {

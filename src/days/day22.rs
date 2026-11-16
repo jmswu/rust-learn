@@ -3,13 +3,15 @@
 //! A closure is an anonymous function that captures its environment. C++
 //! lambdas have the same idea, but Rust tracks **how** the closure captures:
 //!
-//! - `Fn` — borrows immutably; can be called many times
-//! - `FnMut` — borrows mutably; can modify captured state
-//! - `FnOnce` — consumes captured values; callable once
+//! - `Fn` — borrows captures immutably (`&self`); callable many times
+//! - `FnMut` — borrows captures mutably (`&mut self`); can mutate state
+//! - `FnOnce` — takes `self` by value (may consume captures); callable once
 //!
-//! The compiler infers the weakest requirement automatically. `move |x| ...`
-//! forces ownership into the closure — necessary for threads and returned
-//! closures that outlive the current stack frame.
+//! Every closure implements `FnOnce`, and the compiler also implements `FnMut`
+//! and `Fn` when the body allows it (`Fn: FnMut: FnOnce`). `move |x| ...`
+//! forces captures by value rather than by reference — necessary when a
+//! closure outlives the current stack frame (threads, returned closures) —
+//! though a `move` closure that only reads its captures still implements `Fn`.
 //!
 //! ```text
 //! let n = 3;

@@ -16,7 +16,7 @@
 //!
 //! - `&self` — read-only method (like `const` member function)
 //! - `&mut self` — mutating method
-//! - `self` — consumes the value
+//! - `self` — takes ownership (moves, or copies if `Copy`)
 //! - `Self` — the type being implemented
 //!
 //! `new` is just a naming convention, not a constructor. `#[derive(...)]`

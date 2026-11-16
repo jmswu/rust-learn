@@ -107,7 +107,8 @@ fn read(s: &str) {}          // borrows immutably
 fn edit(s: &mut String) {}   // borrows mutably
 ```
 
-`Copy` types: integers, floats, `bool`, `char`, and tuples/arrays of `Copy`.
+`Copy` types: integers, floats, `bool`, `char`, shared references (`&T`),
+function pointers (`fn(...)`), and tuples/arrays of `Copy`.
 `String`, `Vec`, `Box`, `HashMap` are not `Copy`.
 
 ```rust
@@ -127,7 +128,7 @@ not at the end of the block.
 ## Strings
 
 ```rust
-let owned: String = String::from("hello");
+let mut owned: String = String::from("hello");
 let borrowed: &str = &owned;        // full borrow
 let slice: &str = &owned[1..3];     // byte range; may panic on UTF-8 boundary
 let lit: &'static str = "hello";
@@ -222,7 +223,6 @@ let x = maybe.unwrap_or(0);
 let y = maybe.unwrap_or_else(|| compute());
 let z = maybe.expect("maybe must be Some");
 
-// `?` returns early on None/Err
 fn first_even(xs: &[i32]) -> Option<i32> {
     for &x in xs {
         if x % 2 == 0 { return Some(x); }
@@ -230,6 +230,7 @@ fn first_even(xs: &[i32]) -> Option<i32> {
     None
 }
 
+// `?` returns early on None/Err
 fn parse(input: &str) -> Result<i32, std::num::ParseIntError> {
     let n: i32 = input.trim().parse()?;
     Ok(n * 2)
@@ -258,8 +259,9 @@ struct Excerpt<'a> { part: &'a str }
 ```
 
 Lifetimes describe relationships between references; they never extend a value's
-life. Elision covers one input reference, or `&self` methods. `'static` means
-“for the whole program” (e.g. string literals). Most code needs no annotations.
+life. Elision covers functions returning no references, one input reference, or
+`&self`/`&mut self` methods. `'static` means “for the whole program” (e.g.
+string literals). Most code needs no annotations.
 
 Generics are monomorphized: a separate machine-code copy per concrete type.
 Trait bounds are checked at the definition, unlike unchecked C++ templates.
@@ -340,7 +342,7 @@ mod tests {
 }
 ```
 
-`#[ignore]` skips a test unless you pass `--ignored`. Doc tests run with
+`#[ignore]` skips a test unless you pass `-- --ignored`. Doc tests run with
 `cargo test --doc`. Integration tests go in `tests/`.
 
 ## Common compiler errors

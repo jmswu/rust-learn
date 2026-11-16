@@ -1,8 +1,8 @@
 //! # Day 19 — Lifetimes
 //!
-//! A lifetime is the region of code for which a reference is valid. The
-//! compiler usually infers it (**elision**); annotations only describe how
-//! input and output references relate.
+//! A lifetime is the region of code for which a reference is valid. Signatures
+//! often omit lifetimes via **elision**; annotations only describe how input
+//! and output references relate.
 //!
 //! ```text
 //! fn longest<'a>(x: &'a str, y: &'a str) -> &'a str
@@ -12,8 +12,9 @@
 //! does not extend anything; it is a constraint the compiler checks.
 //!
 //! Elision rules cover the common cases:
-//! - one input reference → the output gets that lifetime
-//! - `&self` method → the output gets the lifetime of `self`
+//! - no reference in the return type → no output lifetime needed
+//! - one input reference → output references get that lifetime
+//! - `&self` / `&mut self` method → output references get `self`'s lifetime
 //! - otherwise, annotate
 //!
 //! A struct holding a reference needs a lifetime parameter:

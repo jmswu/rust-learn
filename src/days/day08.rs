@@ -3,7 +3,7 @@
 //! **C++ reflex:** `T&` is a pointer you promise not to misuse.
 //! **Rust:** the compiler enforces the promise, plus one extra rule.
 //!
-//! - `&T` — a shared borrow: read-only, many may exist.
+//! - `&T` — a shared borrow: many may exist (read-only for normal types).
 //! - `&mut T` — an exclusive borrow: read/write, exactly one may exist.
 //! - You can have **many `&T` XOR one `&mut T`**, never both at the same time.
 //!

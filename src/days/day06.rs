@@ -12,12 +12,12 @@
 //! println!("{a}");        // error[E0382]: borrow of moved value: `a`
 //! ```
 //!
-//! C++ also “moves” on copy-from-temporary, but a moved-from object remains
-//! valid (just unspecified). Rust makes use-after-move a compile error.
+//! C++ also moves from rvalues (temporaries or `std::move`), leaving the
+//! moved-from object valid-but-unspecified. Rust forbids use after move.
 //!
 //! Small plain values implement `Copy` and are copied instead: all integers,
-//! `bool`, `char`, floats, and tuples of `Copy` types. `String`, `Vec`, `Box`,
-//! and `HashMap` are not `Copy`.
+//! `bool`, `char`, floats, `&T`, and tuples/arrays of `Copy` types.
+//! `String`, `Vec`, `Box`, and `HashMap` are not `Copy`.
 //!
 //! **Compiler gym** (`src/bin/scratch.rs`): try the three lines above and read
 //! the full error. Then fix it with `let b = a.clone();` or by borrowing.

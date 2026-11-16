@@ -9,8 +9,9 @@
 //! - `cargo test day01` — build the crate and run only this day's tests
 //! - `cargo fmt` / `cargo clippy` — format / lint
 //!
-//! A *crate* is one compilation unit. This whole course is one crate; every
-//! file under `src/days/` is a module (like a `.cpp` file, minus the header).
+//! A *crate* is one compilation unit; a *package* (`Cargo.toml`) can hold
+//! multiple crates (this repo has one library crate plus binary targets).
+//! Modules like `days::day01` organize code inside a crate (declared via `mod`).
 //!
 //! **Exercise:** make `greet` return `Hello, <name>!`.
 //!

@@ -16,9 +16,15 @@
 //! **Exercise:** implement the five core methods, then run the tests with
 //! `cargo test day21`.
 
-#[derive(Debug, Default)]
+#[derive(Debug)]
 pub struct Stack<T> {
     items: Vec<T>,
+}
+
+impl<T> Default for Stack<T> {
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 impl<T> Stack<T> {

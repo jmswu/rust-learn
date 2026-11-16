@@ -18,9 +18,9 @@
 //! `impl Trait` in argument position is shorthand for a generic bound; in return
 //! position it means “some concrete type implementing this”.
 //!
-//! Trait methods must be in scope to call them. The standard traits you will
-//! implement most often are `Debug`, `Display`, `Clone`, `PartialEq`, and
-//! `Iterator`. `#[derive(...)]` writes the boring ones for you.
+//! Trait methods must be in scope to call them. Common standard traits are
+//! `Debug`, `Clone`, `PartialEq` (derivable via `#[derive(...)]`), plus
+//! `Display` and `Iterator` (implemented manually).
 //!
 //! **Exercise:** implement `Summary` for `Article` so `summarize` reads
 //! `"<title> by <author>"`.

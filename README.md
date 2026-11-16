@@ -81,8 +81,8 @@ The exact daily list, commands, and stretch goals are in `TODO.md`.
 |---|---|---|
 | `std::vector<T>` | `Vec<T>` | growable heap buffer |
 | `std::string` | `String` | owned, growable, UTF-8 |
-| `const std::string&` | `&str` | borrowed UTF-8 slice |
-| `std::array<T, N>` | `[T; N]` | fixed length, stack |
+| `const std::string&` / `std::string_view` | `&str` | borrowed UTF-8 slice |
+| `std::array<T, N>` | `[T; N]` | fixed length, inline value |
 | `std::unique_ptr<T>` | `Box<T>` | one owner, automatic drop |
 | `std::shared_ptr<T>` | `Rc<T>` / `Arc<T>` | `Rc` is single-thread, `Arc` is atomic |
 | `std::optional<T>` | `Option<T>` | no null pointers |
@@ -101,7 +101,7 @@ The exact daily list, commands, and stretch goals are in `TODO.md`.
 | headers + `.cpp` files | modules | `mod` + `use` |
 | `printf` | `println!` / `format!` | checked at compile time |
 | `std::move` | automatic move | `.clone()` for an explicit deep copy |
-| `reinterpret_cast` | `unsafe` | avoid in safe code |
+| `reinterpret_cast` | `transmute` / pointer casts in `unsafe` | avoid in safe code |
 
 Two rules worth taping to the monitor:
 

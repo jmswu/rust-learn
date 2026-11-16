@@ -17,12 +17,12 @@
 //! Useful test attributes:
 //! - `#[should_panic]` — the test passes only if it panics
 //! - `#[ignore]` — skipped unless you run `cargo test -- --ignored`
-//! - `#[test]` on a function with no arguments and no return value
+//! - `#[test]` on a zero-argument function returning `()` or `Result<(), E>`
 //!
-//! Run a subset with `cargo test day27`. A **doc test** is code in a `///`
-//! comment; `cargo test --doc` compiles and runs it, which keeps examples
-//! honest. Integration tests live in `tests/` and use the crate like an
-//! external user.
+//! Run a subset with `cargo test day27` (note: positional filters skip doc
+//! tests). A **doc test** is code in a `///` or `//!` doc comment; run them
+//! with `cargo test --doc` (or `cargo test --doc day27`). Integration tests
+//! live in `tests/` and use the crate like an external user.
 //!
 //! Before committing: `cargo fmt` and `cargo clippy -- -D warnings`. The
 //! compiler warnings are not noise; `cargo check` should be clean.

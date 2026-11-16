@@ -4,8 +4,8 @@
 //!
 //! - **Tuple** `(i32, f64, bool)` — a fixed group of mixed values. Access with
 //!   `.0`, `.1`, or destructure: `let (min, max, avg) = stats(&xs);`
-//! - **Array** `[T; N]` — fixed length, lives on the stack, type includes the
-//!   length (`[u8; 4]`). Like `std::array`.
+//! - **Array** `[T; N]` — fixed-length inline value (on the stack for locals),
+//!   type includes the length (`[u8; 4]`). Like `std::array`.
 //! - **`Vec<T>`** — growable heap buffer. Like `std::vector`, but moves and
 //!   borrows follow Rust ownership rules.
 //!

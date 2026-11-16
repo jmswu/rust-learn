@@ -1,8 +1,9 @@
 //! # Day 20 — Modules and crates
 //!
-//! A **crate** is one compilation unit with its own `Cargo.toml`. A **module**
-//! organizes code inside a crate, like a namespace. `src/lib.rs` is the crate
-//! root; `pub mod days;` pulls in `src/days/mod.rs`.
+//! A **package** has a `Cargo.toml` and contains one or more **crates** (each
+//! crate is a compilation unit). A **module** organizes code inside a crate,
+//! like a namespace. `src/lib.rs` is the library crate root; `pub mod days;`
+//! pulls in `src/days/mod.rs`.
 //!
 //! Visibility is private by default. `pub` exposes an item to the parent;
 //! `pub(crate)` exposes it inside the crate only. Paths:
