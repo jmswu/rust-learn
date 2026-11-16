@@ -33,7 +33,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
 
 Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
 
-- [ ] **Day 08 — Borrowing** · `cargo test day08`
+- [x] **Day 08 — Borrowing** · `cargo test day08`
   - Stretch: do the compiler gym in `scratch.rs`, then fix it two ways.
 - [ ] **Day 09 — Slices and strings** · `cargo test day09`
   - Stretch: rewrite `first_word` with `split_once(' ')`.

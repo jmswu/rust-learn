@@ -28,7 +28,8 @@
 // `push_str`, which a `&mut str` cannot do.
 #[allow(clippy::ptr_arg)]
 pub fn append_len(dst: &mut String, src: &str) -> usize {
-    todo!("implement me")
+    dst.push_str(src);
+    dst.len()
 }
 
 #[cfg(test)]
