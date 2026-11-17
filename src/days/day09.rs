@@ -21,7 +21,10 @@
 //! whole string; a leading space means the empty slice.
 
 pub fn first_word(s: &str) -> &str {
-    todo!("implement me")
+    match s.find(' ') {
+        Some(index) => &s[..index],
+        None => s,
+    }
 }
 
 #[cfg(test)]
