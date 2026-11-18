@@ -36,15 +36,16 @@ impl Rectangle {
     }
 
     pub fn area(&self) -> f64 {
-        todo!("implement me")
+        self.width * self.height
     }
 
     pub fn scale(&mut self, factor: f64) {
-        todo!("implement me")
+        self.width *= factor;
+        self.height *= factor;
     }
 
     pub fn is_square(&self) -> bool {
-        todo!("implement me")
+        (self.width - self.height).abs() < 1e-9
     }
 }
 
