@@ -16,7 +16,19 @@
 //! slice return `(0, 0, 0.0)`.
 
 pub fn stats(xs: &[i32]) -> (i32, i32, f64) {
-    todo!("implement me")
+    if xs.is_empty() {
+        return (0, 0, 0.0);
+    }
+
+    let mut min: i32 = xs[0];
+    let mut max: i32 = xs[0];
+    let mut sum: i64 = 0;
+    for &val in xs {
+        min = min.min(val);
+        max = max.max(val);
+        sum += val as i64;
+    }
+    (min, max, sum as f64 / xs.len() as f64)
 }
 
 #[cfg(test)]

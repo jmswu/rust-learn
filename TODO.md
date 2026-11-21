@@ -39,7 +39,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
   - Stretch: rewrite `first_word` with `split_once(' ')`.
 - [x] **Day 10 — Structs and methods** · `cargo test day10`
   - Stretch: add a `translate` method.
-- [ ] **Day 11 — Tuples, arrays, and `Vec`** · `cargo test day11`
+- [x] **Day 11 — Tuples, arrays, and `Vec`** · `cargo test day11`
   - Stretch: add a `median` helper using `Vec` sorting.
 - [ ] **Day 12 — Enums and `Option`** · `cargo test day12`
   - Stretch: add `Shape::Square(f64)` and handle it.
