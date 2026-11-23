@@ -41,7 +41,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
   - Stretch: add a `translate` method.
 - [x] **Day 11 — Tuples, arrays, and `Vec`** · `cargo test day11`
   - Stretch: add a `median` helper using `Vec` sorting.
-- [ ] **Day 12 — Enums and `Option`** · `cargo test day12`
+- [x] **Day 12 — Enums and `Option`** · `cargo test day12`
   - Stretch: add `Shape::Square(f64)` and handle it.
 - [ ] **Day 13 — `match` and patterns** · `cargo test day13`
   - Stretch: add a two-word command parser with `match`.

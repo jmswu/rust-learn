@@ -32,11 +32,20 @@ pub enum Shape {
 }
 
 pub fn area(shape: &Shape) -> f64 {
-    todo!("implement me")
+    match shape {
+        Shape::Circle(radius) => std::f64::consts::PI * radius * radius,
+        Shape::Rectangle { width, height } => width * height,
+        Shape::Triangle { base, height } => base * height / 2 as f64,
+    }
 }
 
 pub fn find_first_even(xs: &[i32]) -> Option<i32> {
-    todo!("implement me")
+    for &val in xs {
+        if val % 2 == 0 {
+            return Some(val);
+        }
+    }
+    None
 }
 
 #[cfg(test)]
