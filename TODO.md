@@ -43,7 +43,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
   - Stretch: add a `median` helper using `Vec` sorting.
 - [x] **Day 12 — Enums and `Option`** · `cargo test day12`
   - Stretch: add `Shape::Square(f64)` and handle it.
-- [ ] **Day 13 — `match` and patterns** · `cargo test day13`
+- [x] **Day 13 — `match` and patterns** · `cargo test day13`
   - Stretch: add a two-word command parser with `match`.
 - [ ] **Day 14 — Checkpoint: RPN calculator** · `cargo test day14`
   - Stretch: add `%` and `^` operators.

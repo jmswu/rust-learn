@@ -25,11 +25,22 @@
 //! **Exercise:** implement FizzBuzz and the number classifier.
 
 pub fn fizzbuzz(n: u32) -> String {
-    todo!("implement me")
+    match (n % 3, n % 5) {
+        (0, 0) => "FizzBuzz".to_string(),
+        (0, _) => "Fizz".to_string(),
+        (_, 0) => "Buzz".to_string(),
+        (_, _) => n.to_string(),
+    }
 }
 
 pub fn describe(n: i32) -> &'static str {
-    todo!("implement me")
+    match n {
+        0 => &"zero",
+        x if x < 0 => &"negative",
+        1..=9 => &"single digit",
+        10..=99 => &"double digit",
+        _ => &"large",
+    }
 }
 
 #[cfg(test)]
