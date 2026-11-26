@@ -45,7 +45,7 @@ Streak: ☐ ☐ ☐ ☐ ☐ ☐ ☐
   - Stretch: add `Shape::Square(f64)` and handle it.
 - [x] **Day 13 — `match` and patterns** · `cargo test day13`
   - Stretch: add a two-word command parser with `match`.
-- [ ] **Day 14 — Checkpoint: RPN calculator** · `cargo test day14`
+- [x] **Day 14 — Checkpoint: RPN calculator** · `cargo test day14`
   - Stretch: add `%` and `^` operators.
 
 **Week 2 takeaway:** ______________________________________________________

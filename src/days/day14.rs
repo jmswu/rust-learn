@@ -14,7 +14,38 @@
 //! division by zero, or leftovers on the stack (for example `1 2`).
 
 pub fn eval(tokens: &[&str]) -> Option<i64> {
-    todo!("implement me")
+    let mut stack: Vec<i64> = Vec::new();
+
+    for token in tokens {
+        match *token {
+            "+" => {
+                let b = stack.pop()?;
+                let a = stack.pop()?;
+                stack.push(a + b);
+            }
+            "-" => {
+                let b = stack.pop()?;
+                let a = stack.pop()?;
+                stack.push(a - b);
+            }
+            "*" => {
+                let b = stack.pop()?;
+                let a = stack.pop()?;
+                stack.push(a * b);
+            }
+            "/" => {
+                let b = stack.pop()?;
+                let a = stack.pop()?;
+                if b == 0 {
+                    return None;
+                }
+                stack.push(a / b);
+            }
+            number => stack.push(number.parse().ok()?),
+        }
+    }
+
+    if stack.len() == 1 { stack.pop() } else { None }
 }
 
 #[cfg(test)]
